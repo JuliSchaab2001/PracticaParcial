@@ -29,4 +29,9 @@ public class NewspaperController {
         newspapepService.add(newspaper);
     }
 
+    @PutMapping("/{idNewspaper}/notice/{idNotice}")
+    public void addNoticeToNewspaper(@PathVariable Integer idNewspaper, @PathVariable Integer idNotice){
+        newspapepService.addNoticeToNewspaper(idNewspaper, idNotice);
+    }
+
 }

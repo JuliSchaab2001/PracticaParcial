@@ -21,11 +21,10 @@ public class Notice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotNull
-
+    @NotNull(message = "Titulo no debe ser nulo")
     private String Title;
 
-    @NotNull
+    @NotNull(message = "Body no debe ser nulo")
     @Size(min = 10)
     private String body;
 
